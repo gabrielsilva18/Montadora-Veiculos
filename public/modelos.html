@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Modelos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+        input, select, button {
+            width: calc(100% - 22px);
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        nav {
+            background-color: #343a40;
+            padding: 15px 20px;
+            color: #fff;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #f8f9fa;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #495057;
+        }
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            color: #495057;
+        }
+        form input, form select, form button {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        form button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        form button:hover {
+            background-color: #0056b3;
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        #listaModelos {
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        #listaModelos div {
+            background-color: #e9ecef;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="montadoras.html">Montadoras</a></li>
+            <li><a href="modelos.html">Modelos</a></li>
+            <li><a href="veiculos.html">Veículos</a></li>
+        </ul>
+    </nav>
+
+    <h1>Cadastro de Modelos</h1>
+    <form id="formModelo">
+        <label for="montadoraSelect">Montadora:</label>
+        <select name="montadora_id" id="montadoraSelect" required>
+            <option value="">Selecione uma Montadora</option>
+        </select>
+
+        <label for="nome">Nome do Modelo:</label>
+        <input type="text" name="nome" id="nome" placeholder="Nome do Modelo" maxlength="100" required>
+
+        <label for="motor">Motor:</label>
+        <input type="text" name="motor" id="motor" placeholder="Motor do Modelo" maxlength="50">
+
+        <label for="valor">Valor (R$):</label>
+        <input type="number" name="valor" id="valor" placeholder="Valor do Modelo" step="0.01" required>
+
+        <label for="automatico">Automático:</label>
+        <select id="automatico" name="automatico" required>
+            <option value="">Selecione uma opção</option>
+            <option value="true">Sim</option>
+            <option value="false">Não</option>
+        </select>
+        
+        <label for="turbo">Turbo:</label>
+        <select id="turbo" name="turbo" required>
+            <option value="">Selecione uma opção</option>
+            <option value="true">Sim</option>
+            <option value="false">Não</option>
+        </select>
+        
+        <button type="submit">Adicionar Modelo</button>
+    </form>
+    
+    <div id="listaModelos"></div>
+
+    <script src="modelos.js"></script>
+</body>
+</html>

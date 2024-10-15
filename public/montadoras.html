@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Montadoras e Veículos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+        nav {
+            background-color: #343a40;
+            padding: 15px 20px;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #f8f9fa;
+        }
+        #content {
+            padding-top: 80px;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #495057;
+        }
+        input, select, button {
+            width: calc(100% - 22px);
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+            color: #495057;
+        }
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            color: #495057;
+        }
+        form input, form select, form button {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        form button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        form button:hover {
+            background-color: #0056b3;
+        }
+        #listaMontadoras {
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        #listaMontadoras div {
+            background-color: #e9ecef;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="./montadoras.html">Montadoras</a></li>
+            <li><a href="./modelos.html">Modelos</a></li>
+            <li><a href="./veiculos.html">Veículos</a></li>
+        </ul>
+    </nav>
+
+    <div id="content">
+        <h1>Cadastro de Montadoras</h1>
+        <form id="formMontadora">
+            <input type="text" name="nome" placeholder="Nome da Montadora" required>
+            <input type="text" name="pais" placeholder="País" required>
+            <input type="number" name="ano_fundacao" placeholder="Ano de Fundação" required>
+            <button type="submit">Adicionar Montadora</button>
+        </form>
+
+        <div id="listaMontadoras">
+            <!-- A lista de montadoras será preenchida dinamicamente -->
+        </div>
+    </div>
+
+    <script src="montadoras.js"></script>
+</body>
+</html>

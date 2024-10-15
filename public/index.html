@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo ao Sistema de Modelos de Veículos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+        nav {
+            background-color: #343a40;
+            padding: 15px 20px;
+            color: #fff;
+            position: fixed; /* Fixa a navbar no topo */
+            width: 100%; /* Garante que a navbar ocupe toda a largura */
+            top: 0; /* Alinha ao topo da página */
+            z-index: 1000; /* Garante que a navbar fique acima de outros elementos */
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #f8f9fa;
+        }
+        #content {
+            padding-top: 80px; /* Espaço para evitar que o conteúdo fique atrás da navbar */
+            text-align: center; /* Centraliza o conteúdo */
+        }
+        h1 {
+            margin: 40px 0;
+            color: #495057;
+        }
+        p {
+            font-size: 18px;
+            margin: 20px 0;
+            color: #6c757d;
+        }
+        .welcome-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="./montadoras.html">Montadoras</a></li>
+            <li><a href="./modelos.html">Modelos</a></li>
+            <li><a href="./veiculos.html">Veículos</a></li>
+        </ul>
+    </nav>
+
+    <div id="content">
+        <div class="welcome-container">
+            <h1>Bem-vindo ao Sistema de Modelos de Veículos!</h1>
+            <p>Este sistema permite cadastrar montadoras e modelos de veículos de forma fácil e intuitiva. Explore as funcionalidades e comece a cadastrar suas montadoras e veículos agora mesmo!</p>
+            <p>Utilize a navegação acima para acessar as diferentes seções do sistema.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Sistema de Modelos de Veículos</p>
+    </footer>
+</body>
+</html>
